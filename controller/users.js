@@ -39,3 +39,5 @@ export const deleteUser = (req,res)=>{
     users.splice(productidx,1)
     res.send({type:'DELETE'})
 }
+
+//ytJRKzfw1WYODvDl  -- organisation
