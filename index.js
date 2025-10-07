@@ -5,7 +5,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import productRouter from "./routes/product.js";
 import express from "express";
-import usersRouter from "./routes/users.js";
+// import usersRouter from "./routes/users.js";
 const app = express();
 dotenv.config()
 
@@ -25,7 +25,7 @@ if(process.env.PUBLIC_DIR){
   app.use(express.static(path.resolve(__dirname,process.env.PUBLIC_DIR)))
 }
 app.use('/products', productRouter);
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
 app.get(/.*/,(req,res)=>{
   res.sendFile(path.resolve(__dirname,'public','index.html'))
 })
